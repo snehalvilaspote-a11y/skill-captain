@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Language Switch Page</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      list-style-type: circle;
+      display: inline-block;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Language Toggle Button -->
+  <button onclick="switchLanguage()">Switch Language</button>
+
+  <!-- Content -->
+  <h1 id="name">snehal pote</h1>
+  <p id="welcome">Welcome to my webpage!</p>
+
+  <h3 id="hobby-title">My Hobbies</h3>
+  <ul>
+    <li id="hobby1">Reading</li>
+    <li id="hobby2">Coding</li>
+    <li id="hobby3">Listening to Music</li>
+  </ul>
+
+  <!-- JavaScript -->
+  <script>
+    let isEnglish = true;
+
+    function switchLanguage() {
+      if (isEnglish) {
+        // Marathi
+        document.getElementById("name").innerText = "";
+        document.getElementById("welcome").innerText = "माझ्या वेबपेजवर तुमचे स्वागत आहे!";
+        document.getElementById("hobby-title").innerText = "माझे छंद";
+        document.getElementById("hobby1").innerText = "वाचन";
+        document.getElementById("hobby2").innerText = "कोडिंग";
+        document.getElementById("hobby3").innerText = "संगीत ऐकणे";
+        isEnglish = false;
+      } else {
+        // English
+        document.getElementById("name").innerText = "snehal pote";
+        document.getElementById("welcome").innerText = "Welcome to my webpage!";
+        document.getElementById("hobby-title").innerText = "My Hobbies";
+        document.getElementById("hobby1").innerText = "Reading";
+        document.getElementById("hobby2").innerText = "Coding";
+        document.getElementById("hobby3").innerText = "Listening to Music";
+        isEnglish = true;
+      }
+    }
+  </script>
+
+</body>
+</html>
